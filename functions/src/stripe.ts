@@ -20,9 +20,9 @@ export const stripeIntent = async (req, res, admin): Promise<any> => {
         console.log(JSON.stringify(payload.data));
   
         const paymentIntent = await stripe.paymentIntents.create({
-            amount: 50000,
+            amount: 5000,
             currency: 'eur',
-            description: 'payload.title',
+            description: 'Awesome Gelato Gasless NFT',
             metadata: payload.data,
           });
         
